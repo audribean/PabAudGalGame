@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://tx37uwfvsh4o"]
+
+[ext_resource type="Script" path="res://Snail.gd" id="1_8qdnb"]
+[ext_resource type="Script" path="res://Human.gd" id="2_1b1dg"]
+[ext_resource type="Script" path="res://Building.gd" id="3_700vl"]
+[ext_resource type="Script" path="res://Shape.gd" id="4_5ked0"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="Node3D" parent="."]
+
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="Snail" type="CharacterBody3D" parent="Characters"]
+script = ExtResource("1_8qdnb")
+
+[node name="Human" type="CharacterBody3D" parent="Characters"]
+script = ExtResource("2_1b1dg")
+
+[node name="Building" type="Node3D" parent="Characters"]
+script = ExtResource("3_700vl")
+
+[node name="Resources" type="Node3D" parent="."]
+
+[node name="Shape" type="RigidBody3D" parent="Resources"]
+script = ExtResource("4_5ked0")
+
+[node name="Hats" type="Node3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="Hats"]
